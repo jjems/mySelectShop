@@ -32,8 +32,6 @@ public class User {
     @Enumerated(value = EnumType.STRING)
     private UserRoleEnum role;
 
-
-
     @Column(unique = true)
     private Long kakaoId;
 

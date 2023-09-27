@@ -36,6 +36,7 @@ public class ProductController {
         return product;
     }
 
+
     // 설정 가격 변경
     @PutMapping("/api/products/{id}")
     public Long updateProduct(@PathVariable Long id, @RequestBody ProductMypriceRequestDto requestDto) {
