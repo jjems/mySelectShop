@@ -32,6 +32,7 @@ dependencies {
     implementation group: 'org.mariadb.jdbc', name: 'mariadb-java-client'
     implementation 'org.mariadb.jdbc:mariadb-java-client:3.2.0'
     implementation("org.springframework.boot:spring-boot-starter-data-jpa")
+    testImplementation 'org.springframework.security:spring-security-test'
     // 스프링 시큐리티
     implementation 'org.springframework.boot:spring-boot-starter-security'
     implementation 'jakarta.validation:jakarta.validation-api:2.0.2' // 최신 버전을 사용하세요
