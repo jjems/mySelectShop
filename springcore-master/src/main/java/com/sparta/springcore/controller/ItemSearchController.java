@@ -2,25 +2,26 @@ package com.sparta.springcore.controller;
 
 import com.sparta.springcore.dto.ItemDto;
 import com.sparta.springcore.service.ItemSearchService;
-import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.stereotype.Controller;
+import lombok.RequiredArgsConstructor;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.ResponseBody;
+import org.springframework.web.bind.annotation.RestController;
 
 import java.io.IOException;
 import java.util.List;
 
-@Controller
+@RestController
+@RequiredArgsConstructor
 public class ItemSearchController {
 
 
     private final ItemSearchService itemSearchService;
 
-    @Autowired
-    public ItemSearchController(ItemSearchService itemSearchService) {
-        this.itemSearchService = itemSearchService;
-    }
+//    @Autowired
+//    public ItemSearchController(ItemSearchService itemSearchService) {
+//        this.itemSearchService = itemSearchService;
+//    }
 
     @GetMapping("/api/search")
     @ResponseBody
