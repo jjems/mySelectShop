@@ -20,6 +20,7 @@ repositories {
 
 dependencies {
 
+    implementation 'org.springframework.boot:spring-boot-starter-data-jdbc'
     implementation 'org.springframework.boot:spring-boot-starter-data-jpa'
     implementation 'org.springframework.boot:spring-boot-starter-web'
     implementation 'org.springframework.boot:spring-boot-starter-security'
@@ -28,9 +29,13 @@ dependencies {
     runtimeOnly 'mysql:mysql-connector-java'
     annotationProcessor 'org.projectlombok:lombok'
     testImplementation 'org.springframework.boot:spring-boot-starter-test'
-
+    implementation group: 'org.mariadb.jdbc', name: 'mariadb-java-client'
+    implementation 'org.mariadb.jdbc:mariadb-java-client:3.2.0'
+    implementation("org.springframework.boot:spring-boot-starter-data-jpa")
     // 스프링 시큐리티
     implementation 'org.springframework.boot:spring-boot-starter-security'
+    implementation 'jakarta.validation:jakarta.validation-api:2.0.2' // 최신 버전을 사용하세요
+
     // Thymeleaf (뷰 템플릿 엔진)
     implementation 'org.springframework.boot:spring-boot-starter-thymeleaf'
 }
